@@ -11,7 +11,7 @@ export default async function page() {
           <p>Ebenezer Duct Cleaning, established 2020, is an extremely passionate, capable and dedicated duct cleaning service that serves, Toronto, Durham, Peel and the GTA. We offer residental duct and vent cleaning services, </p>
         </div>
         <div className='flex flex-col gap-4 items-center'>
-          <Image src={'/profile-pic.jpg'} width={100} height={100} alt='photo of Ebenezer Duct Cleaning owenr Samuel Varghese alias Binoy' className='w-100' quality={100}/>
+          <Image src={'./profile-pic.jpg'} width={100} height={100} alt='photo of Ebenezer Duct Cleaning owenr Samuel Varghese alias Binoy' className='w-100' quality={100}/>
           <p className='text-lg font-bold text-dark'>Samuel Varghese (Binoy)</p>
         </div>
       </section>

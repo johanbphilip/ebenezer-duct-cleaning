@@ -25,7 +25,7 @@ export default function Home() {
       ]
   return (
     <>
-      <Image src={"/duc1.webp"} width={100} height={100} quality={100} alt="Man cleaning an airduct" className="w-1/2 rounded-md" />
+      <Image src={"./duc1.webp"} width={100} height={100} quality={100} alt="Man cleaning an airduct" className="w-1/2 rounded-md" />
       <section className="text-center py-10 flex flex-col gap-4">
         <div className="bg-light-accent p-10">
           <h1 className="text-2xl font-bold text-primary-dark">RESIDENTIAL AND COMMERCIAL DUCT CLEANING SERVICE</h1> 
@@ -33,19 +33,19 @@ export default function Home() {
         </div>
         <div className="flex flex-row gap-5 p-10">
           <div className="flex flex-col items-center w-full justify-between">
-            <Image src={"/duct-cleaning.jpg"} width={100} height={100} alt="duct being cleaned" className="rounded-md w-100"></Image>
+            <Image src={"./duct-cleaning.jpg"} width={100} height={100} alt="duct being cleaned" className="rounded-md w-100"></Image>
             <p className="text-primary font-bold">Duct Cleaning</p>
           </div>
           <div className="flex flex-col items-center w-full justify-between">
-            <Image src={"/vent-cleaning.jpg"} width={100} height={100} alt="vent being cleaned" className="rounded-md w-100"></Image>
+            <Image src={"./vent-cleaning.jpg"} width={100} height={100} alt="vent being cleaned" className="rounded-md w-100"></Image>
             <p className="text-primary font-bold">Vent Cleaning</p>
           </div>
           <div className="flex flex-col items-center w-full justify-between">
-            <Image src={"/duct-vent-repair.jpg"} width={100} height={100} alt="duct being cleaned" className="rounded-md w-100"></Image>
+            <Image src={"./duct-vent-repair.jpg"} width={100} height={100} alt="duct being cleaned" className="rounded-md w-100"></Image>
             <p className="text-primary font-bold">Duct & Vent Repair</p>
           </div>
           <div className="flex flex-col items-center w-full justify-between">
-            <Image src={"/waste-disposal.webp"} width={100} height={100} alt="duct being cleaned" className="rounded-md  w-100"></Image>
+            <Image src={"./waste-disposal.webp"} width={100} height={100} alt="duct being cleaned" className="rounded-md  w-100"></Image>
             <p className="text-primary font-bold">Waste Disposal</p>
           </div>
         </div>
