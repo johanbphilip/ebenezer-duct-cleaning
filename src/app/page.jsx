@@ -62,7 +62,7 @@ export default function Home() {
             it’s our mission.
           </p>
         </div>
-        <div className="flex flex-row gap-5 p-10">
+        <div className="grid grid-cols-4 gap-5 p-10">
           <div className="flex w-full flex-col items-center justify-between">
             <Image
               src={'./duct-cleaning.jpg'}

@@ -1,44 +1,96 @@
-import Image from 'next/image'
+import { CustomImage } from '@/components/CustomImage';
+import { Mail, Phone } from 'lucide-react';
 
 export default async function page() {
   return (
-    <main className="w-full flex flex-col items-center mt-33">
-      <section className='flex justify-between p-20 gap-10'>
-        <div className='p-20 w-2/3'>
-          <h1 className='text-4xl font-bold'>About Ebenezer Duct Cleaning</h1>
-          <p>Ebenezer Duct Cleaning, established 2020, is an extremely passionate, capable and dedicated duct cleaning service that serves, Toronto, Durham, Peel and the GTA. We offer residental duct and vent cleaning services, </p>
+    <main className="mt-33 flex w-full flex-col items-center">
+      <section className="flex justify-between gap-10 p-20">
+        <div className="w-2/3 p-20">
+          <h1 className="text-4xl font-bold">About Ebenezer Duct Cleaning</h1>
+          <p>
+            Ebenezer Duct Cleaning, established 2020, is an extremely
+            passionate, capable and dedicated duct cleaning service that serves,
+            Toronto, Durham, Peel and the GTA. We offer residental duct and vent
+            cleaning services,{' '}
+          </p>
         </div>
-        <div className='flex flex-col gap-4 items-center'>
-          <Image src={'./profile-pic.jpg'} width={100} height={100} alt='photo of Ebenezer Duct Cleaning owenr Samuel Varghese alias Binoy' className='w-100' quality={100}/>
-          <p className='text-lg font-bold text-dark'>Samuel Varghese (Binoy)</p>
+        <CustomImage
+          src={'./profile-pic.jpg'}
+          alt={
+            "image of Ebenezer Duct Cleaning's owner, Samuel Varghese aka Binoy"
+          }
+          className={
+            'hover-images w-100 rounded-md object-cover shadow-md shadow-gray-400'
+          }
+          caption={'Samuel Varghese (Binoy)'}
+        />
+      </section>
+      <section className="bg-primary flex w-full flex-col items-center gap-10 p-10 text-white">
+        <h3 className="text-3xl font-bold">Why Us?</h3>
+        <div className="flex flex-row gap-10">
+          <div className="bg-light-accent rounded-md p-5 text-center">
+            <h3 className="text-dark font-bold">Reason 1</h3>
+            <p className="text-dark">
+              Subtitle/descirption of just Reason 1 and then include an icon
+              somewhere
+            </p>
+          </div>
+          <div className="bg-light-accent rounded-md p-5 text-center">
+            <h3 className="text-dark font-bold">Reason 2</h3>
+            <p className="text-dark">
+              Subtitle/descirption of just Reason 2 and then include an icon
+              somewhere
+            </p>
+          </div>
+          <div className="bg-light-accent rounded-md p-5 text-center">
+            <h3 className="text-dark font-bold">Reason 3</h3>
+            <p className="text-dark">
+              Subtitle/descirption of just Reason 3 and then include an icon
+              somewhere
+            </p>
+          </div>
+          <div className="bg-light-accent rounded-md p-5 text-center">
+            <h3 className="text-dark font-bold">Reason 4</h3>
+            <p className="text-dark">
+              Subtitle/descirption of just Reason 4 and then include an icon
+              somewhere
+            </p>
+          </div>
+          <div className="bg-light-accent rounded-md p-5 text-center">
+            <h3 className="text-dark font-bold">Reason 5</h3>
+            <p className="text-dark">
+              Subtitle/descirption of just Reason 5 and then include an icon
+              somewhere
+            </p>
+          </div>
         </div>
       </section>
-      <section className='bg-primary text-white flex flex-col w-full p-10 items-center gap-10' >
-        <h3 className='font-bold text-3xl'>Why Us?</h3>
-        <div className='flex flex-row gap-10'>
-          <div className='bg-light-accent p-5 rounded-md text-center'>
-            <h3 className='text-dark font-bold'>Card 1</h3>
-            <p className='text-dark'>Subtitle/descirption of just h3 and then icon above instead</p>
-          </div>
-          <div className='bg-light-accent p-5 rounded-md text-center'>
-            <h3 className='text-dark font-bold'>Card 2</h3>
-            <p className='text-dark'>Subtitle/descirption of just h3 and then icon above instead</p>
-          </div>
-          <div className='bg-light-accent p-5 rounded-md text-center'>
-            <h3 className='text-dark font-bold'>Card 3</h3>
-            <p className='text-dark'>Subtitle/descirption of just h3 and then icon above instead</p>
-          </div>
-        </div>
-      </section>
-      <section className='flex p-10 justify-between p-20 gap-20 items-center'>
-        <div className='flex flex-col'>
-          <h2 className='font-black text-3xl'>Trust us for all your duct cleaning needs</h2>
+      <section className="flex items-center justify-between gap-20 p-20">
+        <div className="flex flex-col">
+          <h2 className="text-3xl font-black">
+            Trust us for all your duct cleaning needs
+          </h2>
           <p>Call us now to breathe fresh and live free</p>
         </div>
-        <div>
-          <a className='p-5 rounded-md bg-light-accent font-bold text-2xl text-primary'>123-456-7890</a>
+        <div className="bg-light-accent text-dark flex flex-col gap-2 rounded-md p-5 text-lg">
+          <a
+            className="flex items-center gap-2 underline underline-offset-2"
+            type="tel"
+            href="tel:647-703-6727"
+          >
+            <Phone className="text-primary" />
+            647-703-6727
+          </a>
+          <a
+            href="mailto:johanbp27@gmail.com"
+            type="email"
+            className="flex items-center gap-2"
+          >
+            <Mail className="text-primary" />
+            ebenezerductcleaning@gmail.com
+          </a>
         </div>
       </section>
     </main>
-  )
+  );
 }

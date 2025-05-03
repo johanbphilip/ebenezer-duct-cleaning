@@ -1,33 +1,36 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-  --color-primary: #C55FFC;
-  --color-light-accent: #EFDCF9;
-  --color-dark: #323E42;
-  --color-primary-dark: #7954A1; 
+  --color-primary: #c55ffc;
+  --color-light-accent: #efdcf9;
+  --color-dark: #323e42;
+  --color-primary-dark: #7954a1;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@layer components{
+@layer components {
   .active-link {
-    @apply text-dark underline underline-offset-4
+    @apply text-dark underline underline-offset-4;
+  }
+  .hover-images {
+    @apply shadow-md lg:transform lg:transition-transform lg:duration-200 lg:hover:scale-105 lg:hover:shadow-lg;
   }
 }
 
-  :root {
-    --text: #1d130b;
-    --background: #f6ece4;
-    --primary: #673c1e;
-    --secondary: #dda478;
-    --accent: #ce722c;
-  }
-  .dark {
-    --text: #f4eae1;
-    --background: #1b1109;
-    --primary: #e1b798;
-    --secondary: #874d22;
-    --accent: #d37731;
-  }
+:root {
+  --text: #1d130b;
+  --background: #f6ece4;
+  --primary: #673c1e;
+  --secondary: #dda478;
+  --accent: #ce722c;
+}
+.dark {
+  --text: #f4eae1;
+  --background: #1b1109;
+  --primary: #e1b798;
+  --secondary: #874d22;
+  --accent: #d37731;
+}

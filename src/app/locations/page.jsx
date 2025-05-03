@@ -68,7 +68,7 @@ export default function page() {
   );
 }
 
-export const Card = ({ place, cities, image, description, alt }) => {
+const Card = ({ place, cities, image, description, alt }) => {
   return (
     <div className="flex h-full flex-col overflow-hidden rounded-xl bg-white shadow-md">
       <div className="relative h-48 w-full">
