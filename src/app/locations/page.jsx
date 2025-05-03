@@ -1,46 +1,89 @@
-'use client'
-
-import { Accordion } from "@/components/Accordion";
-import Link from "next/link";
-import { useState } from "react";
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function page() {
-  const locations = [ 
+  const regions = [
     {
-      title: "Toronto Area",
-      content: 'Toronto\nRichmond Hill\n',
-    }
-  ]
+      place: 'Toronto',
+      cities: 'Etobicoke | North York | Scarborough',
+      image: './toronto.webp',
+      description: 'The great city of Toronto',
+      alt: 'An image of the Toronto city skyline',
+    },
+    {
+      place: 'Durham',
+      cities: 'Ajax | Bowmanville | Oshawa | Pickering | Whitby | Uxbridge',
+      image: './durham.jpg',
+      description: 'The great region of Durham',
+      alt: 'An image of city center Uxbridge',
+    },
+    {
+      place: 'Durham East',
+      cities:
+        'Bowmanville | Cobourg | Courtice | Newcastle | Port Hope | Port Perry',
+      image: './durham east.webp',
+      description: 'The beautiful east end of Durham',
+      alt: 'An image of city center uxbridge',
+    },
+    {
+      place: 'Peel',
+      cities: 'Brampton | Missisauga',
+      image: './peel.jpg',
+      description: 'The great region of Peel',
+      alt: 'An image of city center uxbridge',
+    },
+    {
+      place: 'York',
+      cities: 'Markham | Thornhill | Richmond Hill | Vaughan',
+      image: './york.jpg',
+      description: 'The great region of York',
+      alt: 'An image of city center uxbridge',
+    },
+  ];
   return (
-    <>
-      <div className="p-10 ">
-        <h3 className="font-bold text-4xl text-primary mb-10">
+    <main className="mt-27 flex w-full flex-col place-items-center py-10">
+      <div className="p-10">
+        <h3 className="text-primary mb-10 text-4xl font-bold">
           Duct Cleaning Service Regions
         </h3>
-        <p>We are pleased to serve all our clients in the Greate Toronto Area (GTA). Select a region to see specific cities and/or towns that we serve.</p>
+        <p>
+          We are pleased to serve all our clients in the Greate Toronto Area
+          (GTA). Select a region to see specific cities and/or towns that we
+          serve.
+        </p>
       </div>
-      <div className="p-10 flex gap-10 justify-center">
-        <Link href={'locations/toronto-region'} className="rounded-full size-50 bg-light-accent flex items-center justify-center">
-          <div className="rounded-full size-46 border-4 border-primary flex flex-col text-center justify-center">
-            <h3 className="font-bold text-lg leading-tight tracking-tighter text-dark">Toronto Region</h3>
-          </div>
-        </Link>
-        <Link href={'locations/durham-region'} className="rounded-full size-50 bg-primary flex items-center justify-center">
-          <div className="rounded-full size-46 border-4 border-light-accent flex flex-col text-center justify-center">
-            <h3 className="font-bold text-lg leading-tight tracking-tighter text-white">Durham Region</h3>
-          </div>
-        </Link>
-        <Link href={'locations/york-region'} className="rounded-full size-50 bg-light-accent flex items-center justify-center">
-          <div className="rounded-full size-46 border-4 border-primary flex flex-col text-center justify-center">
-            <h3 className="font-bold text-lg leading-tight tracking-tighter text-dark">York Region</h3>
-          </div>
-        </Link>
-        <Link href={'locations/peel-region'} className="rounded-full size-50 bg-primary flex items-center justify-center">
-          <div className="rounded-full size-46 border-4 border-light-accent flex flex-col text-center justify-center">
-            <h3 className="font-bold text-lg leading-tight tracking-tighter text-white">Peel Region</h3>
-          </div>
-        </Link>
+      <div className="grid w-full grid-cols-5 justify-center gap-10 p-10">
+        {regions.map((region, index) => (
+          <Card
+            key={index}
+            place={region.place}
+            cities={region.cities}
+            image={region.image}
+            description={region.description}
+            alt={region.alt}
+          />
+        ))}
       </div>
-    </>
+    </main>
   );
 }
+
+export const Card = ({ place, cities, image, description, alt }) => {
+  return (
+    <div className="flex h-full flex-col overflow-hidden rounded-xl bg-white shadow-md">
+      <div className="relative h-48 w-full">
+        <Image
+          src={image}
+          alt={alt}
+          fill
+          className="rounded-t-xl object-cover"
+        />
+      </div>
+      <div className="flex flex-grow flex-col p-2">
+        <h2 className="text-primary-dark text-2xl font-bold">{place}</h2>
+        <p className="text-primary/40 mb-10 text-sm font-bold">{cities}</p>
+        <p className="mt-auto">{description}</p>
+      </div>
+    </div>
+  );
+};
