@@ -6,7 +6,9 @@ export default async function page() {
     <main className="mt-33 flex w-full flex-col items-center">
       <section className="flex justify-between gap-10 p-20">
         <div className="w-2/3 p-20">
-          <h1 className="text-4xl font-bold">About Ebenezer Duct Cleaning</h1>
+          <h1 className="text-primary-dark text-4xl font-bold">
+            About Ebenezer Duct Cleaning
+          </h1>
           <p>
             Ebenezer Duct Cleaning, established 2020, is an extremely
             passionate, capable and dedicated duct cleaning service that serves,

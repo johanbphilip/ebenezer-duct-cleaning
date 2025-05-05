@@ -9,7 +9,7 @@ export const Header = () => {
   const pathname = usePathname();
   return (
     <header className="bg-primary fixed top-0 z-10 flex w-full flex-row items-center justify-between p-10 text-lg text-white">
-      <nav className="flex items-center gap-2">
+      <nav className="flex flex-row items-center gap-2">
         <Image
           src={'./logo.png'}
           width={100}
@@ -21,37 +21,37 @@ export const Header = () => {
           Ebenezer Duct Cleaning
         </Link>
       </nav>
-      <nav className="flex flex-row items-center gap-10">
+      <nav className="flex flex-row items-center gap-10 text-white">
         <Link
           href={'/about'}
-          className={`${pathname.includes('/about') ? 'active-link' : ''}`}
+          className={`${pathname.includes('/about') ? 'active-link' : ''} hover:bg-light-accent hover:text-dark px-5 py-2 font-bold hover:rounded-md`}
         >
           About
         </Link>
         <Link
           href={'/services'}
-          className={`${pathname.includes('/services') ? 'active-link' : ''}`}
+          className={`${pathname.includes('/services') ? 'active-link' : ''} hover:bg-light-accent hover:text-dark px-5 py-2 font-bold hover:rounded-md`}
         >
           Services
         </Link>
         <Link
           href={'/locations'}
-          className={`${pathname.includes('/locations') ? 'active-link' : ''}`}
+          className={`${pathname.includes('/locations') ? 'active-link' : ''} hover:bg-light-accent hover:text-dark px-5 py-2 font-bold hover:rounded-md`}
         >
           Locations
         </Link>
         <Link
           href={'/reviews'}
-          className={`${pathname.includes('/reviews') ? 'active-link' : ''}`}
+          className={`${pathname.includes('/reviews') ? 'active-link' : ''} hover:bg-light-accent hover:text-dark px-5 py-2 font-bold hover:rounded-md`}
         >
           Review
         </Link>
-        <a
-          href="tel:647-703-6727"
-          className="bg-dark hover:bg-light-accent hover:text-dark rounded-md p-3 text-white"
+        <Link
+          href={'/quote'}
+          className="bg-dark hover:bg-light-accent hover:text-dark rounded-md px-5 py-2 font-bold"
         >
-          647-703-6727
-        </a>
+          Get A Quote
+        </Link>
       </nav>
     </header>
   );

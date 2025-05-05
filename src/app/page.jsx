@@ -1,6 +1,7 @@
 'use client';
 
 import { Accordion } from '@/components/Accordion';
+import { QuoteForm } from '@/components/QuoteForm';
 import { Clock8, MapPin, Phone } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -35,7 +36,7 @@ export default function Home() {
     },
   ];
   return (
-    <main className="mt-33 flex w-full flex-col items-center">
+    <main className="mt-33 flex w-full flex-col items-center text-lg">
       <Image
         src={'./duc1.webp'}
         width={100}
@@ -45,11 +46,11 @@ export default function Home() {
         className="my-10 w-1/2 rounded-md"
       />
       <section className="flex flex-col gap-10 text-center">
-        <div className="bg-light-accent p-10">
-          <h1 className="text-primary-dark text-2xl font-bold">
+        <div className="bg-light-accent p-20">
+          <h1 className="text-primary-dark mb-10 text-2xl font-bold">
             RESIDENTIAL AND COMMERCIAL DUCT CLEANING SERVICE
           </h1>
-          <p>
+          <p className="text-lg">
             At Ebenezer Duct Cleaning, we’re passionate about helping families
             and businesses breathe cleaner, healthier air. With a commitment to
             excellence and customer satisfaction, we go above and beyond to
@@ -106,8 +107,8 @@ export default function Home() {
         </div>
       </section>
       <section className="bg-dark text-light-accent flex w-full flex-row gap-20 p-10">
-        <div className="">
-          <h2 className="text-lg font-bold">
+        <div className="flex flex-col gap-2">
+          <h2 className="text-xl font-bold">
             Passionate, Dedicated and Dependable
           </h2>
           <p className="text-white">
@@ -115,7 +116,7 @@ export default function Home() {
             that you will get our best work. We will work to ensure that you get
             your money's worth and that your ducts and vents are left spotless.
           </p>
-          <h2 className="text-lg font-bold">Affordable</h2>
+          <h2 className="text-xl font-bold">Affordable</h2>
           <p className="text-white">
             We do our best to provide the best possible service at the most
             affordable rates. Contact us for a more accurate quote based on your
@@ -123,6 +124,16 @@ export default function Home() {
           </p>
         </div>
         <Accordion items={items} className={'w-full text-white'} />
+      </section>
+      <section className="flex w-full items-center justify-between gap-20 p-10">
+        <div className="flex w-1/2 flex-col gap-2">
+          <h2 className="text-primary text-4xl font-bold">Get a Quote</h2>
+          <p className="text-lg">
+            Fill out the form to provide us with information so that we can
+            estimate a quote for your beautiful home
+          </p>
+        </div>
+        <QuoteForm />
       </section>
     </main>
   );
