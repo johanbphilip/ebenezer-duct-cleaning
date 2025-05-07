@@ -49,3 +49,12 @@ export default function page() {
     </main>
   );
 }
+
+// Our Services
+// 	1	Residential Duct CleaningImprove indoor air quality, reduce dust and allergens, and boost HVAC efficiency in your home.
+// 	2	Commercial Duct CleaningTailored solutions for offices, clinics, restaurants, and other businesses — helping create a safer, cleaner work environment.
+// 	3	Dryer Vent CleaningPrevent fire hazards and improve dryer performance with a thorough vent cleaning service.
+// 	4	HVAC System CleaningComprehensive cleaning of your furnace, coils, blowers, and more to ensure smooth operation year-round.
+// 	5	Mold & Odor TreatmentIf your ducts smell musty or show signs of mold, we use safe, effective treatments to eliminate odors and growth.
+// 	6	Air Filter ReplacementKeep your air fresh and systems running smoothly with regular filter changes — we’ll recommend and install the best option for your needs.
+// 	7	Pre-Sale Home Duct CleaningSelling your home? Clean ducts can be a big selling point. We’ll help you make a great impression.

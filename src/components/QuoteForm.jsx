@@ -4,13 +4,14 @@ import { quoteFormValidate } from '@/app/actions/quote';
 import { redirect } from 'next/navigation';
 import React, { useActionState } from 'react';
 
+//TODO: eventually switch to shadcn form, but for now this works well
 export const QuoteForm = () => {
   const [state, action, pending] = useActionState(quoteFormValidate, undefined);
 
   return (
     <form
       action={action}
-      className="border-primary bg-light-accent flex w-1/2 flex-col gap-4 rounded-lg border p-5"
+      className="bg-background flex w-1/2 flex-col gap-4 rounded-lg border p-5"
     >
       <div className="flex flex-col gap-2">
         <label htmlFor="name" className="font-bold">
@@ -20,11 +21,9 @@ export const QuoteForm = () => {
           id="name"
           name="name"
           placeholder="Name"
-          className="border-primary rounded-md border-2 bg-white p-2"
+          className="rounded-md border p-2"
         />
-        {state?.errors?.name && (
-          <p className="text-red-400">{state.errors.name}</p>
-        )}
+        {state?.errors?.name && <p className="">{state.errors.name}</p>}
       </div>
       <div className="flex w-full gap-2">
         <div className="flex w-full flex-col gap-2">
@@ -35,11 +34,9 @@ export const QuoteForm = () => {
             id="email"
             name="email"
             placeholder="youremail@email.com"
-            className="border-primary rounded-md border-2 bg-white p-2"
+            className="rounded-md border p-2"
           />
-          {state?.errors?.email && (
-            <p className="text-red-400">{state.errors.email}</p>
-          )}
+          {state?.errors?.email && <p className="">{state.errors.email}</p>}
         </div>
         <div className="flex w-full flex-col gap-2">
           <label htmlFor="phone" className="font-bold">
@@ -49,11 +46,9 @@ export const QuoteForm = () => {
             id="phone"
             name="phone"
             placeholder="4161234567"
-            className="border-primary rounded-md border-2 bg-white p-2"
+            className="rounded-md border p-2"
           />
-          {state?.errors?.phone && (
-            <p className="text-red-400">{state.errors.phone}</p>
-          )}
+          {state?.errors?.phone && <p className="">{state.errors.phone}</p>}
         </div>
       </div>
       <div className="flex flex-col gap-2">
@@ -64,11 +59,9 @@ export const QuoteForm = () => {
           id="city"
           name="city"
           placeholder="Toronto"
-          className="border-primary rounded-md border-2 bg-white p-2"
+          className="rounded-md border p-2"
         />
-        {state?.errors?.city && (
-          <p className="text-red-400">{state.errors.city}</p>
-        )}
+        {state?.errors?.city && <p className="">{state.errors.city}</p>}
       </div>
       <div className="flex flex-col gap-2">
         <label htmlFor="services-needed" className="font-bold">
@@ -78,10 +71,10 @@ export const QuoteForm = () => {
           id="services-needed"
           name="services-needed"
           placeholder="I would like to..."
-          className="border-primary rounded-md border-2 bg-white p-2"
+          className="rounded-md border p-2"
         />
         {state?.errors?.servicesNeeded && (
-          <p className="text-red-400">{state.errors.servicesNeeded}</p>
+          <p className="">{state.errors.servicesNeeded}</p>
         )}
       </div>
       <div className="flex flex-col gap-2">
@@ -92,15 +85,13 @@ export const QuoteForm = () => {
           id="notes"
           name="notes"
           placeholder="Additional Notes"
-          className="border-primary rounded-md border-2 bg-white p-2"
+          className="rounded-md border p-2"
         />
-        {state?.errors?.notes && (
-          <p className="text-red-400">{state.errors.notes}</p>
-        )}
+        {state?.errors?.notes && <p className="">{state.errors.notes}</p>}
       </div>
       <button
         type="submit"
-        className="bg-primary rounded-md p-2 font-bold text-white"
+        className="bg-primary rounded-md border p-2 font-bold"
       >
         {' '}
         {pending ? 'Submitting...' : 'Submit'}

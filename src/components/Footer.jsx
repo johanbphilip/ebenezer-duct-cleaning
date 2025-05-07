@@ -6,7 +6,7 @@ import React from 'react';
 export const Footer = () => {
   const date = new Date().getFullYear();
   return (
-    <footer className="bg-dark right-0 bottom-0 flex w-full flex-col items-center gap-10 p-10 text-white">
+    <footer className="bg-primary-foreground right-0 bottom-0 flex w-full flex-col items-center gap-10 p-10 text-black">
       <div className="flex flex-row gap-40">
         <div className="flex flex-row gap-4">
           <Image
@@ -17,7 +17,9 @@ export const Footer = () => {
             alt="Image of Ebenezer Duct Cleaning's logo"
           />
           <div className="flex flex-col">
-            <h2 className="text-xl font-bold">Ebenezer Duct Cleaning</h2>
+            <h2 className="text-primary text-xl font-bold">
+              Ebenezer Duct Cleaning
+            </h2>
             <p>8 Coe Dr, Ajax, ON</p>
             <p>L1T 3H9, Canada</p>
             <a
@@ -111,7 +113,11 @@ export const Footer = () => {
       </div>
       <p>
         &copy; {date} Ebenezer Duct Cleaning. All Rights Reserved. Designed by{' '}
-        <a href={'https://github.com/johanbphilip'} target="_blank">
+        <a
+          href={'https://github.com/johanbphilip'}
+          target="_blank"
+          className="text-primary"
+        >
           Johan Philip
         </a>
       </p>
