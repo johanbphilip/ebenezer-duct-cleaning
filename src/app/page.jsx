@@ -19,16 +19,7 @@ export default function Home() {
       title: 'Contact & Support',
       content:
         'For any questions, concerns or inquiries, please contact us at 647-703-6727',
-      content: (
-        <>
-          <p>
-            For any questions, concerns or inquiries, please contact us at{' '}
-            <a href="tel:647-703-6727" className="underline underline-offset-2">
-              647-703-6727
-            </a>
-          </p>
-        </>
-      ),
+      content: '',
       icon: <Phone />,
     },
   ];
@@ -39,14 +30,14 @@ export default function Home() {
           <h3 className="text-primary text-3xl font-bold">
             Breathe Cleaner. Live Better.
           </h3>
-          <p className="text-text">
+          {/* <p className="text-text">
             At Ebenezer Duct Cleaning, we’re committed to helping families and
             businesses enjoy cleaner, healthier air. As a reliable, passionate,
             and affordable duct cleaning service, we bring professionalism and
             genuine care to every job. Whether you're improving air quality,
             reducing allergens, or simply ensuring your HVAC system runs
             efficiently — we're here to serve with integrity and excellence.
-          </p>
+          </p> */}
         </div>
         <Image
           src={'./duc1.webp'}
