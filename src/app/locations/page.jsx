@@ -41,9 +41,9 @@ export default function page() {
     },
   ];
   return (
-    <main className="mt-27 flex w-full flex-col place-items-center py-10">
+    <main className="mt-31 flex w-full flex-col place-items-center py-10">
       <div className="p-10">
-        <h3 className="text-primary mb-10 text-4xl font-bold">
+        <h3 className="mb-10 text-4xl font-bold">
           Duct Cleaning Service Regions
         </h3>
         <p>
@@ -68,9 +68,9 @@ export default function page() {
   );
 }
 
-export const Card = ({ place, cities, image, description, alt }) => {
+const Card = ({ place, cities, image, description, alt }) => {
   return (
-    <div className="flex h-full flex-col overflow-hidden rounded-xl bg-white shadow-md">
+    <div className="flex h-full flex-col overflow-hidden rounded-xl shadow-md">
       <div className="relative h-48 w-full">
         <Image
           src={image}
@@ -80,8 +80,8 @@ export const Card = ({ place, cities, image, description, alt }) => {
         />
       </div>
       <div className="flex flex-grow flex-col p-2">
-        <h2 className="text-primary-dark text-2xl font-bold">{place}</h2>
-        <p className="text-primary/40 mb-10 text-sm font-bold">{cities}</p>
+        <h2 className="text-primary text-2xl font-bold">{place}</h2>
+        <p className="text-secondary mb-10 text-sm font-bold">{cities}</p>
         <p className="mt-auto">{description}</p>
       </div>
     </div>

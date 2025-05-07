@@ -1,21 +1,60 @@
-'use client'
+'use client';
 
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import React from 'react'
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import React from 'react';
+import { ModeToggle } from './ModeToggle';
 
 export const Header = () => {
   const pathname = usePathname();
   return (
-    <header className='w-full p-10 flex flex-row justify-between bg-primary text-white text-lg fixed top-0 items-center'>
-      <Link href={"/"} className='font-bold'>Ebenezer Duct Cleaning</Link>
-      <nav className='flex flex-row gap-10 items-center'>
-          <Link href={'/about'} className={`${pathname.includes('/about') ? 'active-link' : ''}`}>About</Link>
-          <Link href={'/services'} className={`${pathname.includes('/services') ? 'active-link' : ''}`}>Services</Link>
-          <Link href={'/locations'} className={`${pathname.includes('/locations') ? 'active-link' : ''}`}>Locations</Link>
-          <Link href={'/reviews'} className={`${pathname.includes('/reviews') ? 'active-link' : ''}`}>Review</Link>
-          <a href='tel:647-703-6727' className='bg-dark text-white rounded-md p-3 hover:bg-light-accent hover:text-dark'>647-703-6727</a>
+    <header className="bg-primary-foreground fixed top-0 z-10 flex w-full flex-row items-center justify-between p-10 text-lg text-black">
+      <nav className="flex flex-row items-center gap-2">
+        <Image
+          src={'./logo.png'}
+          width={100}
+          height={100}
+          className="size-10"
+          alt="Image of Ebenezer Duct Cleaning's logo"
+        />
+        <Link href={'/'} className="flex font-bold">
+          Ebenezer Duct Cleaning
+        </Link>
+      </nav>
+      <nav className="flex flex-row items-center gap-10">
+        <ModeToggle />
+        <Link
+          href={'/about'}
+          className={`${pathname.includes('/about') ? 'active-link' : ''} hover-link px-5 py-2 font-bold`}
+        >
+          About
+        </Link>
+        <Link
+          href={'/services'}
+          className={`${pathname.includes('/services') ? 'active-link' : ''} hover-link px-5 py-2 font-bold`}
+        >
+          Services
+        </Link>
+        <Link
+          href={'/locations'}
+          className={`${pathname.includes('/locations') ? 'active-link' : ''} hover-link px-5 py-2 font-bold`}
+        >
+          Locations
+        </Link>
+        <Link
+          href={'/reviews'}
+          className={`${pathname.includes('/reviews') ? 'active-link' : ''} hover-link px-5 py-2 font-bold`}
+        >
+          Review
+        </Link>
+        <Link
+          href={'/quote'}
+          className="bg-primary rounded-md px-5 py-2 font-bold"
+        >
+          Get A Quote
+        </Link>
       </nav>
     </header>
-  )
-}
+  );
+};
