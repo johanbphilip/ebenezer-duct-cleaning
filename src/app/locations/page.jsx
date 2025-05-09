@@ -6,14 +6,14 @@ export default function page() {
     {
       place: 'Toronto',
       cities: 'Etobicoke | North York | Scarborough',
-      image: './toronto.webp',
+      image: '/toronto.webp',
       description: 'The great city of Toronto',
       alt: 'An image of the Toronto city skyline',
     },
     {
       place: 'Durham',
       cities: 'Ajax | Bowmanville | Oshawa | Pickering | Whitby | Uxbridge',
-      image: './durham.jpg',
+      image: '/durham.jpg',
       description: 'The great region of Durham',
       alt: 'An image of city center Uxbridge',
     },
@@ -21,29 +21,29 @@ export default function page() {
       place: 'Durham East',
       cities:
         'Bowmanville | Cobourg | Courtice | Newcastle | Port Hope | Port Perry',
-      image: './durham east.webp',
+      image: '/durham east.webp',
       description: 'The beautiful east end of Durham',
       alt: 'An image of city center uxbridge',
     },
     {
       place: 'Peel',
       cities: 'Brampton | Missisauga',
-      image: './peel.jpg',
+      image: '/peel.jpg',
       description: 'The great region of Peel',
       alt: 'An image of city center uxbridge',
     },
     {
       place: 'York',
       cities: 'Markham | Thornhill | Richmond Hill | Vaughan',
-      image: './york.jpg',
+      image: '/york.jpg',
       description: 'The great region of York',
       alt: 'An image of city center uxbridge',
     },
   ];
   return (
-    <main className="mt-31 flex w-full flex-col place-items-center py-10">
+    <main className="mt-18 flex w-full flex-col place-items-center py-10 lg:mt-31">
       <div className="p-10">
-        <h3 className="mb-10 text-4xl font-bold">
+        <h3 className="text-primary mb-10 text-4xl font-bold">
           Duct Cleaning Service Regions
         </h3>
         <p>
@@ -52,7 +52,7 @@ export default function page() {
           serve.
         </p>
       </div>
-      <div className="grid w-full grid-cols-5 justify-center gap-10 p-10">
+      <div className="grid w-full grid-cols-1 justify-center gap-10 p-10 md:grid-cols-5">
         {regions.map((region, index) => (
           <Card
             key={index}

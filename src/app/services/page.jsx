@@ -2,7 +2,7 @@ import { Phone } from 'lucide-react';
 
 export default function page() {
   return (
-    <main className="mt-33 flex flex-col items-center">
+    <main className="mt-18 flex flex-col items-center lg:mt-31">
       <section className="flex w-full flex-row justify-between p-30">
         <h2 className="text-primary p-10 text-3xl font-bold">
           Services Provided

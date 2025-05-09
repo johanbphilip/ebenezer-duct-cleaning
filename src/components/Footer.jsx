@@ -6,17 +6,17 @@ import React from 'react';
 export const Footer = () => {
   const date = new Date().getFullYear();
   return (
-    <footer className="bg-primary-foreground right-0 bottom-0 flex w-full flex-col items-center gap-10 p-10 text-black">
-      <div className="flex flex-row gap-40">
-        <div className="flex flex-row gap-4">
+    <footer className="bg-primary-foreground right-0 bottom-0 grid w-full flex-col items-center gap-10 p-10 text-center text-black md:flex">
+      <div className="grid items-center gap-10 md:flex md:flex-row md:gap-40">
+        <div className="flex flex-col items-center gap-4 md:flex-row">
           <Image
-            src={'./logo.png'}
+            src={'/logo.png'}
             width={100}
             height={100}
-            className="size-40"
+            className="size-40 md:flex"
             alt="Image of Ebenezer Duct Cleaning's logo"
           />
-          <div className="flex flex-col">
+          <div className="flex flex-col items-center">
             <h2 className="text-primary text-xl font-bold">
               Ebenezer Duct Cleaning
             </h2>
@@ -112,7 +112,9 @@ export const Footer = () => {
         </div>
       </div>
       <p>
-        &copy; {date} Ebenezer Duct Cleaning. All Rights Reserved. Designed by{' '}
+        &copy; {date} Ebenezer Duct Cleaning. All Rights Reserved.{' '}
+        <br className="lg:hidden" />
+        Designed by{' '}
         <a
           href={'https://github.com/johanbphilip'}
           target="_blank"

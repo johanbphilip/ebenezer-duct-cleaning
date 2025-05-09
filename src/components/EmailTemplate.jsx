@@ -5,7 +5,7 @@ export const EmailTemplate = ({
   email,
   phone,
   city,
-  serviceNeeded,
+  servicesNeeded,
   notes,
 }) => {
   return (
@@ -121,7 +121,7 @@ export const EmailTemplate = ({
             margin: '5px 0',
           }}
         >
-          Services Needed: {serviceNeeded}
+          Services Needed: {servicesNeeded}
         </p>
 
         <div style={{ margin: '10px 0' }}>
