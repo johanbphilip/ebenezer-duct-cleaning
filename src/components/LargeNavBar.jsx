@@ -29,7 +29,7 @@ export const LargeNav = () => {
             className="size-10"
             alt="Image of Ebenezer Duct Cleaning's logo"
           />
-          <Link href={'/'} className="flex font-bold">
+          <Link href={'/'} className="text-primary flex text-xl font-bold">
             Ebenezer Duct Cleaning
           </Link>
         </div>

@@ -1,6 +1,6 @@
 'use server';
 
-import { POST, sendEmail } from '../api/send/route';
+import { sendEmail } from '../api/send/route';
 
 const { quoteFormSchema } = require('../lib/definitions');
 

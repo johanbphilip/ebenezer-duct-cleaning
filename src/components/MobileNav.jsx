@@ -20,7 +20,7 @@ export const MobileNav = () => {
   };
   return (
     <>
-      <nav className="flex w-full flex-row items-center justify-between md:hidden">
+      <nav className="flex w-full flex-row items-center justify-between lg:hidden">
         <div className="flex flex-row items-center gap-5">
           <Image
             src={'/logo.png'}
@@ -28,10 +28,7 @@ export const MobileNav = () => {
             height={100}
             className="size-10"
             alt="Image of Ebenezer Duct Cleaning's logo"
-          />
-          <Link href={'/'} className="flex font-bold">
-            Ebenezer Duct Cleaning
-          </Link>
+          ></Image>
         </div>
         <div className="flex flex-row items-center gap-10">
           <ModeToggle />
@@ -40,8 +37,15 @@ export const MobileNav = () => {
       </nav>
 
       {mobileIsOpen && (
-        <nav className="bg-primary-foreground absolute top-0 right-0 flex h-screen w-screen flex-col items-center justify-between gap-10 py-50">
+        <nav className="bg-primary-foreground absolute top-0 right-0 flex h-screen w-screen flex-col items-center justify-evenly py-20">
           <X className="fixed top-5 right-5 size-8" onClick={closeNav} />
+          <Link
+            href={'/'}
+            className={`${pathname.includes('/about') ? 'active-link' : ''} hover-link border-primary rounded-md border px-10 py-2 font-bold`}
+            onClick={closeNav}
+          >
+            Home
+          </Link>
           <Link
             href={'/about'}
             className={`${pathname.includes('/about') ? 'active-link' : ''} hover-link border-primary rounded-md border px-10 py-2 font-bold`}

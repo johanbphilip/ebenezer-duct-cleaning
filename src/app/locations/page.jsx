@@ -41,15 +41,14 @@ export default function page() {
     },
   ];
   return (
-    <main className="mt-18 flex w-full flex-col place-items-center py-10 lg:mt-31">
+    <main className="mt-18 flex w-full flex-col place-items-center py-10 lg:mt-19">
       <div className="p-10">
-        <h3 className="text-primary mb-10 text-4xl font-bold">
+        <h1 className="text-primary text-6xl font-bold">
           Duct Cleaning Service Regions
-        </h3>
-        <p>
-          We are pleased to serve all our clients in the Greate Toronto Area
-          (GTA). Select a region to see specific cities and/or towns that we
-          serve.
+        </h1>
+        <p className="mt-2">
+          We are pleased to serve all our clients in the Greater Toronto Area
+          (GTA).
         </p>
       </div>
       <div className="grid w-full grid-cols-1 justify-center gap-10 p-10 md:grid-cols-5">

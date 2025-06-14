@@ -24,7 +24,7 @@ export const CustomQuoteDrawer = ({ size, buttonStyle }) => {
       if (closeButtonRef.current) {
         closeButtonRef.current.click();
       }
-    }, 1500);
+    }, 1000);
   };
   return (
     <Drawer>
@@ -33,14 +33,13 @@ export const CustomQuoteDrawer = ({ size, buttonStyle }) => {
           Get Quote
         </Button>
       </DrawerTrigger>
-      <DrawerContent className={'flex flex-col items-center'}>
-        <DrawerHeader className={'w-full px-20 md:w-1/2 md:px-0'}>
-          <DrawerTitle>Get A Quote</DrawerTitle>
-          <DrawerDescription>Set your daily activity goal.</DrawerDescription>
+      <DrawerContent className={'flex flex-col items-center gap-0'}>
+        <DrawerHeader className={'w-full px-2 md:w-1/2 md:px-0'}>
+          <DrawerTitle className={'text-primary'}>Get A Quote</DrawerTitle>
         </DrawerHeader>
-        <div className="flex w-full flex-col items-center">
+        <div className="flex w-full flex-col items-center px-2">
           <QuoteForm onSuccess={handleSuccess} />
-          <DrawerFooter className={'w-full px-15 md:w-1/2 md:px-0'}>
+          <DrawerFooter className={'mb-4 w-full px-0 py-2 md:w-1/2 md:py-4'}>
             <DrawerClose asChild>
               <Button ref={closeButtonRef} variant="outline">
                 Cancel

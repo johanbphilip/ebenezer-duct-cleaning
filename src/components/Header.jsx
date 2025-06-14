@@ -8,7 +8,7 @@ import { LargeNav } from './LargeNavBar';
 export const Header = () => {
   const pathname = usePathname();
   return (
-    <header className="bg-primary-foreground fixed top-0 z-10 flex w-full flex-row items-center justify-between p-4 text-lg text-black md:p-10">
+    <header className="bg-primary-foreground fixed top-0 z-10 flex w-full flex-row items-center justify-between p-4 text-lg text-black lg:p-4">
       <MobileNav />
       <LargeNav />
     </header>

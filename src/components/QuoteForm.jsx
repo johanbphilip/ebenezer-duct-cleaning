@@ -26,9 +26,9 @@ export const QuoteForm = ({ onSuccess }) => {
   return (
     <form
       action={action}
-      className="bg-background flex flex-col gap-4 rounded-lg border p-5 md:w-1/2"
+      className="bg-background flex w-full flex-col gap-2 rounded-lg border p-2 md:w-1/2 md:gap-4 md:p-5"
     >
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-1 md:gap-2">
         <label htmlFor="name" className="font-semibold">
           Name
         </label>
@@ -42,22 +42,22 @@ export const QuoteForm = ({ onSuccess }) => {
           <p className="text-destructive">{state.errors.name}</p>
         )}
       </div>
-      <div className="flex w-full gap-2">
-        <div className="flex w-full flex-col gap-2">
+      <div className="flex w-full gap-2 pr-2">
+        <div className="flex w-1/2 flex-col gap-1 md:gap-2">
           <label htmlFor="email" className="font-semibold">
             Email
           </label>
           <input
             id="email"
             name="email"
-            placeholder="youremail@email.com"
+            placeholder="email@email.com"
             className="rounded-md border p-2"
           />
           {state?.errors?.email && (
             <p className="text-destructive">{state.errors.email}</p>
           )}
         </div>
-        <div className="flex w-full flex-col gap-2">
+        <div className="flex w-1/2 flex-col gap-1 md:gap-2">
           <label htmlFor="phone" className="font-semibold">
             Phone Number
           </label>
@@ -72,8 +72,8 @@ export const QuoteForm = ({ onSuccess }) => {
           )}
         </div>
       </div>
-      <div className="flex w-full gap-2">
-        <div className="flex w-full flex-col gap-2">
+      <div className="flex w-full gap-2 pr-2">
+        <div className="flex w-1/2 flex-col gap-1 md:gap-2">
           <label htmlFor="city" className="font-semibold">
             City Of Residence
           </label>
@@ -87,7 +87,7 @@ export const QuoteForm = ({ onSuccess }) => {
             <p className="text-destructive">{state.errors.city}</p>
           )}
         </div>
-        <div className="flex w-full flex-col gap-2">
+        <div className="flex w-1/2 flex-col gap-1 md:gap-2">
           <label htmlFor="services-needed" className="font-semibold">
             Services Needed
           </label>

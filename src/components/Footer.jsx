@@ -2,26 +2,26 @@ import { Mail, Phone } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { CustomQuoteDrawer } from './CustomQuoteDrawer';
 
 export const Footer = () => {
   const date = new Date().getFullYear();
   return (
     <footer className="bg-primary-foreground right-0 bottom-0 grid w-full flex-col items-center gap-10 p-10 text-center text-black md:flex">
-      <div className="grid items-center gap-10 md:flex md:flex-row md:gap-40">
-        <div className="flex flex-col items-center gap-4 md:flex-row">
+      <div className="grid items-start justify-center gap-10 md:flex md:flex-row md:gap-40">
+        <div className="flex flex-col items-center gap-4 md:flex-row md:items-start">
           <Image
             src={'/logo.png'}
             width={100}
             height={100}
-            className="size-40 md:flex"
+            className="size-30 md:size-40"
             alt="Image of Ebenezer Duct Cleaning's logo"
           />
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center gap-2">
             <h2 className="text-primary text-xl font-bold">
               Ebenezer Duct Cleaning
             </h2>
             <p>8 Coe Dr, Ajax, ON</p>
-            <p>L1T 3H9, Canada</p>
             <a
               type="tel"
               href="tel:647-703-6727"
@@ -38,10 +38,11 @@ export const Footer = () => {
               <Mail />
               647-703-6727
             </a>
+            <CustomQuoteDrawer buttonStyle={'w-full text-lg'} />
           </div>
         </div>
         <div className="flex flex-col gap-2">
-          <h2 className="text-xl font-bold">Important Links</h2>
+          <h2 className="text-primary text-xl font-bold">Important Links</h2>
           <div className="flex flex-col">
             <Link
               href={'/about'}
@@ -76,7 +77,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col gap-2">
-          <h2 className="text-xl font-bold">Locations Served</h2>
+          <h2 className="text-primary text-xl font-bold">Locations Served</h2>
           <div className="flex flex-col">
             <Link
               href={'/locations'}

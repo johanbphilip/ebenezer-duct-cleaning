@@ -8,41 +8,30 @@ import {
 } from '@/components/ui/carousel';
 
 import Image from 'next/image';
-import { Card, CardContent, CardDescription } from '@/components/ui/card';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardTitle,
+} from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
 export default async function page() {
   const works = [
     {
-      before: '/profile-pic.jpg',
-      after: '/profile-pic.jpg',
+      before: '/edc - 8.jpeg',
+      after: '/edc - 10.jpeg',
     },
     {
-      before: '/profile-pic.jpg',
-      after: '/profile-pic.jpg',
-    },
-    {
-      before: '/profile-pic.jpg',
-      after: '/profile-pic.jpg',
-    },
-    {
-      before: '/profile-pic.jpg',
-      after: '/profile-pic.jpg',
-    },
-    {
-      before: '/profile-pic.jpg',
-      after: '/profile-pic.jpg',
-    },
-    {
-      before: '/profile-pic.jpg',
-      after: '/profile-pic.jpg',
+      before: '/edc - 29.jpeg',
+      after: '/edc - 2.jpeg',
     },
   ];
   return (
-    <main className="mt-18 flex w-full flex-col items-center text-base lg:mt-31">
+    <main className="mt-18 flex w-full flex-col items-center text-base lg:mt-19">
       <section className="bg-primary-foreground grid grid-cols-1 items-center gap-10 p-10 md:grid-cols-2 md:p-20">
         <div className="flex flex-col gap-5">
-          <h1 className="text-primary text-4xl font-bold">
+          <h1 className="text-primary text-6xl font-bold">
             A Local Name You Can Trust. A Team That Cares.
           </h1>
           <p className="text-black">
@@ -67,68 +56,92 @@ export default async function page() {
 
         <div className="flex flex-col items-center gap-2">
           <Image
-            src={'/profile-pic.jpg'}
+            src={'/edc - 16.jpeg'}
             width={100}
             height={100}
             className="hover-images w-full rounded-md object-cover shadow-md md:w-80"
             alt="image of Ebenezer Duct Cleaning's owner, Samuel Varghese aka Binoy"
+            unoptimized={true}
           />
           <p className="text-primary font-bold">
             Samuel Varghese (Binoy), Founder
           </p>
         </div>
       </section>
-      <section className="grid w-full grid-cols-2 flex-col items-center gap-10 p-10 md:flex md:p-20">
-        <h3 className="text-primary text-4xl font-bold">Why Us?</h3>
-        <div className="flex flex-col gap-10 md:flex-row">
-          <div className="rounded-md p-5 text-center">
-            <h3 className="font-bold">Reason 1</h3>
-            <p className="">
-              Subtitle/descirption of just Reason 1 and then include an icon
-              somewhere
+      <section className="grid w-full grid-cols-2 grid-rows-3 flex-col items-center gap-5 p-10 text-left md:py-20 lg:px-80">
+        <h2 className="text-primary text-5xl font-bold">Why Us?</h2>
+        <Card className={'flex-1'}>
+          <CardContent>
+            <CardTitle className={'text-primary text-xl'}>
+              Locally Owned & Family Operated
+            </CardTitle>
+            <p>
+              Ebenezer Duct Cleaning is proudly rooted in the community,
+              offering personalized service you can trust — no call centers or
+              cookie-cutter solutions.
             </p>
-          </div>
-          <div className="rounded-md p-5 text-center">
-            <h3 className="font-bold">Reason 2</h3>
-            <p className="">
-              Subtitle/descirption of just Reason 2 and then include an icon
-              somewhere
+          </CardContent>
+        </Card>
+        <Card className={'flex-1'}>
+          <CardContent>
+            <CardTitle className={'text-primary text-xl'}>
+              Exceptional Cleaning Standards
+            </CardTitle>
+            <p>
+              We go beyond surface-level cleaning. Our team uses
+              industry-leading equipment to remove dust, allergens, mold, and
+              debris for truly fresh, breathable air.
             </p>
-          </div>
-          <div className="rounded-md p-5 text-center">
-            <h3 className="font-bold">Reason 3</h3>
-            <p className="">
-              Subtitle/descirption of just Reason 3 and then include an icon
-              somewhere
+          </CardContent>
+        </Card>
+        <Card className={'flex-1'}>
+          <CardContent>
+            <CardTitle className={'text-primary text-xl'}>
+              On-Time & Professional Service
+            </CardTitle>
+            <p>
+              We respect your time. Our technicians arrive promptly, wear
+              protective gear, and treat your home like it’s their own — clean,
+              courteous, and careful.
             </p>
-          </div>
-          <div className="rounded-md p-5 text-center">
-            <h3 className="font-bold">Reason 4</h3>
-            <p className="">
-              Subtitle/descirption of just Reason 4 and then include an icon
-              somewhere
+          </CardContent>
+        </Card>
+
+        <Card className={'flex-1'}>
+          <CardContent>
+            <CardTitle className={'text-primary text-xl'}>
+              Healthier Home Environment{' '}
+            </CardTitle>
+            <p>
+              Clean ducts mean cleaner air — reducing allergy symptoms,
+              improving HVAC efficiency, and promoting a healthier indoor
+              environment for your family.
             </p>
-          </div>
-          <div className="rounded-md p-5 text-center">
-            <h3 className="font-bold">Reason 5</h3>
-            <p className="">
-              Subtitle/descirption of just Reason 5 and then include an icon
-              somewhere
+          </CardContent>
+        </Card>
+        <Card className={'flex-1'}>
+          <CardContent>
+            <CardTitle className={'text-primary text-xl'}>
+              Trusted by Customers{' '}
+            </CardTitle>
+            <p>
+              Backed by glowing reviews and loyal clients, we’ve earned a
+              reputation for quality service and reliable results.
             </p>
-          </div>
-        </div>
+          </CardContent>
+        </Card>
       </section>
-      <section className="bg-foreground text-background flex w-full flex-col items-center gap-10 p-20">
+      <section className="bg-foreground text-background flex w-full flex-col place-items-center items-center gap-10 p-10 text-center md:p-20">
         <div className="flex flex-col gap-2">
-          <h2 className="text-primary text-3xl font-black">
+          <h2 className="text-primary text-4xl font-bold">
             Trust us for all your duct cleaning needs
           </h2>
           <p>
             Call us now to breathe fresh and live free. Available Monday to
-            Saturday, 8 AM to 6 PM
+            Saturday, 8 AM to 6 PM.
           </p>
         </div>
-        <div className="flex w-full justify-evenly">
+        <div className="flex w-full items-center justify-center gap-10">
           <Button asChild size={'lg'} className={'p-5 text-xl'}>
             <a href={'tel:647-703-6727'}>Call Us</a>
           </Button>
@@ -142,41 +155,44 @@ export default async function page() {
           </Button>
         </div>
       </section>
-      <section className="flex w-full flex-col items-center justify-center gap-20 p-20 px-30">
-        <h3 className="text-primary text-6xl font-bold">Our Works</h3>
-        <Carousel className="w-full">
-          <CarouselContent className="-ml-10">
+      <section className="flex w-full flex-col items-center justify-center gap-10 p-20 px-15 md:px-30">
+        <h2 className="text-primary text-5xl font-bold">Our Works</h2>
+        <Carousel className="w-1/2 md:w-full" opts={{ align: 'start' }}>
+          <CarouselContent className="-ml-1 lg:-ml-4">
             {works.map((work, index) => (
-              <CarouselItem
-                key={index}
-                className="pl-10 md:basis-1/2 lg:basis-1/3"
-              >
+              <CarouselItem key={index} className="pl-1 lg:basis-1/3 lg:pl-4">
                 <Card
                   className={
-                    'bg-accent-foreground text-background flex flex-row items-center gap-4 p-4 pb-2'
+                    'flex flex-col items-center gap-4 p-4 pb-2 md:flex-row md:gap-2 md:p-2 md:pb-1'
                   }
                 >
                   <CardContent
-                    className={'flex w-1/2 flex-col items-center gap-2 p-0'}
+                    className={
+                      'flex w-full flex-col items-center gap-2 p-0 md:gap-1'
+                    }
                   >
                     <Image
                       src={work.before}
                       width={100}
                       height={100}
-                      alt="something"
+                      alt="image of duct before servicing; the duct was dirty and full or debris"
                       className="w-full rounded-md"
+                      unoptimized={true}
                     />
                     <CardDescription>Before</CardDescription>
                   </CardContent>
                   <CardContent
-                    className={'flex w-1/2 flex-col items-center gap-2 p-0'}
+                    className={
+                      'flex w-full flex-col items-center gap-2 p-0 md:gap-1'
+                    }
                   >
                     <Image
                       src={work.after}
                       width={100}
                       height={100}
-                      alt="something"
+                      alt="image of duct after servicing; the duct is in significantly better shape"
                       className="w-full rounded-md"
+                      unoptimized={true}
                     />
                     <CardDescription>After</CardDescription>
                   </CardContent>
@@ -184,8 +200,8 @@ export default async function page() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          {/* <CarouselPrevious className={'size-7'} />
+          <CarouselNext className={'size-7'} /> */}
         </Carousel>
       </section>
     </main>
