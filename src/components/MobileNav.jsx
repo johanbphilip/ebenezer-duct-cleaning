@@ -23,7 +23,7 @@ export const MobileNav = () => {
       <nav className="flex w-full flex-row items-center justify-between lg:hidden">
         <div className="flex flex-row items-center gap-5">
           <Image
-            src={'/logo.png'}
+            src={'/logo/logo.png'}
             width={100}
             height={100}
             className="size-10"
