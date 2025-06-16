@@ -11,7 +11,7 @@ export const Footer = () => {
       <div className="grid items-start justify-center gap-10 md:flex md:flex-row md:gap-40">
         <div className="flex flex-col items-center gap-4 md:flex-row md:items-start">
           <Image
-            src={'/logo.png'}
+            src={'/logo/logo.png'}
             width={100}
             height={100}
             className="size-30 md:size-40"
