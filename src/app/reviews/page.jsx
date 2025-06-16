@@ -1,5 +1,32 @@
-'use client';
-import { ElfsightWidget } from 'react-elfsight-widget';
+import { ReviewWidget } from '@/components/ReviewWidget';
+
+export const metadata = {
+  title: 'Reviews',
+  description:
+    'Read what our customers have to say about our duct cleaning services.',
+  keywords: [
+    'Ebenezer Duct Cleaning',
+    'Duct Cleaning',
+    'Reviews',
+    'Customer Reviews',
+    'Customer Feedback',
+  ],
+  openGraph: {
+    title: 'Reviews | Ebenezer Duct Cleaning',
+    description:
+      'Read what our customers have to say about our duct cleaning services.',
+    url: 'https://ebenezer-duct-cleaning.vercel.app/reviews',
+    siteName: 'Ebenzezer Duct Cleaning',
+    images: [
+      {
+        url: '/og/og-reviews.png', // Must be an absolute URL
+      },
+    ],
+
+    locale: 'en_US',
+    type: 'website',
+  },
+};
 
 export default function page() {
   return (
@@ -8,10 +35,7 @@ export default function page() {
         Customer Reviews
       </h1>
 
-      <ElfsightWidget
-        widgetId="ba032397-ad39-4232-95ed-e7f58ffd9c7f"
-        className="w-full"
-      />
+      <ReviewWidget />
     </main>
   );
 }

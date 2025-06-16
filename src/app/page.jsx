@@ -74,7 +74,7 @@ export default function Home() {
       </section>
       <section className="bg-background text-background border-primary grid grid-cols-1 items-center gap-10 border-b p-10 md:grid-cols-2 md:gap-20 md:p-20">
         <Image
-          src={'/edc - 16.jpeg'}
+          src={'/works/edc - 16.jpeg'}
           width={100}
           height={100}
           alt="Image of before and after"

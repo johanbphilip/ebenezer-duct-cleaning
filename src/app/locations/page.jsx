@@ -1,6 +1,56 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'Locations',
+  description:
+    'Ebenezer Duct Cleaning serves the Greater Toronto Area (GTA) including Durham, Peel, and York regions. If you dont see your location, please contact us.',
+  keywords: [
+    'Ebenezer Duct Cleaning',
+    'Duct Cleaning',
+    'Locations Served',
+    'Durham',
+    'Peel',
+    'GTA',
+    'Toronto',
+    'York',
+    'Durham Region',
+    'Ajax',
+    'Bowmanville',
+    'Oshawa',
+    'Pickering',
+    'Whitby',
+    'Uxbridge',
+    'Brampton',
+    'Mississauga',
+    'Markham',
+    'Thornhill',
+    'Richmond Hill',
+    'Vaughan',
+    'Scarborough',
+    'North York',
+    'Etobicoke',
+    'Newcastle',
+    'Cobourg',
+    'Port Hope',
+    'Port Perry',
+  ],
+  openGraph: {
+    title: 'Locations | Ebenezer Duct Cleaning',
+    description:
+      'Ebenezer Duct Cleaning serves the Greater Toronto Area (GTA) including Durham, Peel, and York regions. If you dont see your location, please contact us.',
+    url: 'https://ebenezer-duct-cleaning.vercel.app/locations',
+    siteName: 'Ebenzezer Duct Cleaning',
+    images: [
+      {
+        url: '/og/og-locations.png', // Must be an absolute URL
+      },
+    ],
+
+    locale: 'en_US',
+    type: 'website',
+  },
+};
 export default function page() {
   const regions = [
     {

@@ -1,10 +1,42 @@
 import { Phone } from 'lucide-react';
 import Image from 'next/image';
 
+export const metadata = {
+  title: 'Services',
+  description:
+    'Ebenezer Duct Cleaning offers a host of different services to ensure your ducts and vents are clean and efficient. From residential to commercial, we have you covered.',
+  keywords: [
+    'Ebenezer Duct Cleaning',
+    'Services',
+    'Duct Cleaning',
+    'Vent Cleaning',
+    'Dryer Vent Cleaning',
+    'Vent Repair',
+    'Commercial Duct Cleaning',
+    'HVAC System Cleaning',
+    'Air Filter Replacement',
+    'Pre-Sale Home Duct Cleaning',
+  ],
+  openGraph: {
+    title: 'Services | Ebenezer Duct Cleaning',
+    description:
+      'Ebenezer Duct Cleaning offers a host of different services to ensure your ducts and vents are clean and efficient. From residential to commercial, we have you covered.',
+    url: 'https://ebenezer-duct-cleaning.vercel.app/services',
+    siteName: 'Ebenzezer Duct Cleaning',
+    images: [
+      {
+        url: '/og/og-services.png', // Must be an absolute URL
+      },
+    ],
+
+    locale: 'en_US',
+    type: 'website',
+  },
+};
 export default function page() {
   return (
     <main className="mt-18 flex w-full flex-col items-center text-lg lg:mt-19">
-      <section className="grid w-full grid-cols-1 items-start gap-10 p-10 md:grid-cols-3 lg:px-50 lg:py-30">
+      <section className="grid w-full grid-cols-1 items-start gap-10 p-10 md:grid-cols-2 lg:grid-cols-3 lg:px-50 lg:py-30">
         <h1 className="text-primary text-6xl font-bold md:col-span-2">
           Services Provided
         </h1>
@@ -12,7 +44,7 @@ export default function page() {
         <div className="flex h-full w-full flex-col shadow-md">
           <div className="w-full items-center justify-center rounded-t-xl">
             <Image
-              src={'/duct-cleaning.jpg'}
+              src={'/services/duct-cleaning.jpg'}
               width={100}
               height={100}
               alt="image of a duct being suctioned"
@@ -33,7 +65,7 @@ export default function page() {
         <div className="flex h-full w-full flex-col shadow-md">
           <div className="w-full items-center justify-center rounded-t-xl">
             <Image
-              src={'/waste-disposal.webp'}
+              src={'/services/waste-disposal.webp'}
               width={100}
               height={100}
               alt="image of a dryer vent being cleaned"
@@ -53,7 +85,7 @@ export default function page() {
         <div className="flex h-full w-full flex-col shadow-md">
           <div className="w-full items-center justify-center rounded-t-xl">
             <Image
-              src={'/vent-cleaning.jpg'}
+              src={'/services/vent-cleaning.jpg'}
               width={100}
               height={100}
               alt="image of a HVAC vent being cleaned"
@@ -88,7 +120,7 @@ export default function page() {
         <div className="flex h-full w-full flex-col shadow-md">
           <div className="w-full items-center justify-center rounded-t-xl">
             <Image
-              src={'/filter.jpg'}
+              src={'/services/filter.jpg'}
               width={100}
               height={100}
               alt="image of an air filter in a home being replaced"
@@ -110,7 +142,7 @@ export default function page() {
         <div className="flex h-full w-full flex-col shadow-md">
           <div className="w-full items-center justify-center rounded-t-xl">
             <Image
-              src={'/pre-home.webp'}
+              src={'/services/pre-home.webp'}
               width={100}
               height={100}
               alt="image of a guy cleaning the ducts in a home prior to sale"
@@ -130,15 +162,29 @@ export default function page() {
             </p>
           </div>
         </div>
+        <div className="flex h-full w-full flex-col shadow-md">
+          <div className="w-full items-center justify-center rounded-t-xl">
+            <Image
+              src={'/services/duct-vent-repair.jpg'}
+              width={100}
+              height={100}
+              alt="image of a guy cleaning the ducts in a home prior to sale"
+              className="h-full w-full rounded-t-xl object-cover"
+              unoptimized={true}
+            />
+          </div>
+          <div className="flex flex-col p-2">
+            <h3 className="text-dark text-xl font-bold">Duct & Vent Repair</h3>
+            <p>
+              Fix your damaged or disconnected ducts and vents to restore
+              airflow and efficiency. We’ll assess and repair any issues to keep
+              your system running.
+              <br />
+              {'    '}
+            </p>
+          </div>
+        </div>
       </section>
     </main>
   );
 }
-
-// Our Services
-// 	2
-// 	3
-// 	4
-// 	5
-// 	6
-// 	7

@@ -16,15 +16,68 @@ import {
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
+export const metadata = {
+  title: 'About',
+  description:
+    'Ebenezer Duct Cleaning has been serving the Greater Toronto Area (GTA) including Durham, Peel, and York regions with professional duct cleaning services. We are a family-owned business dedicated to providing reliable and affordable solutions for cleaner air.',
+  keywords: [
+    'Ebenezer Duct Cleaning',
+    'Duct Cleaning',
+    'About',
+    'About Us',
+    'Proffesional',
+    'Durham',
+    'Peel',
+    'GTA',
+    'Toronto',
+    'York',
+    'Durham Region',
+    'Ajax',
+    'Bowmanville',
+    'Oshawa',
+    'Pickering',
+    'Whitby',
+    'Uxbridge',
+    'Brampton',
+    'Mississauga',
+    'Markham',
+    'Thornhill',
+    'Richmond Hill',
+    'Vaughan',
+    'Scarborough',
+    'North York',
+    'Etobicoke',
+    'Newcastle',
+    'Cobourg',
+    'Port Hope',
+    'Port Perry',
+  ],
+  openGraph: {
+    title: 'About | Ebenezer Duct Cleaning',
+    description:
+      'Ebenezer Duct Cleaning has been serving the Greater Toronto Area (GTA) including Durham, Peel, and York regions with professional duct cleaning services. We are a family-owned business dedicated to providing reliable and affordable solutions for cleaner air.',
+    url: 'https://ebenezer-duct-cleaning.vercel.app/about',
+    siteName: 'Ebenzezer Duct Cleaning',
+    images: [
+      {
+        url: '/og/og-about.png', // Must be an absolute URL
+      },
+    ],
+
+    locale: 'en_US',
+    type: 'website',
+  },
+};
+
 export default async function page() {
   const works = [
     {
-      before: '/edc - 8.jpeg',
-      after: '/edc - 10.jpeg',
+      before: '/works/edc - 8.jpeg',
+      after: '/works/edc - 10.jpeg',
     },
     {
-      before: '/edc - 29.jpeg',
-      after: '/edc - 2.jpeg',
+      before: '/works/edc - 29.jpeg',
+      after: '/works/edc - 2.jpeg',
     },
   ];
   return (
@@ -56,7 +109,7 @@ export default async function page() {
 
         <div className="flex flex-col items-center gap-2">
           <Image
-            src={'/edc - 16.jpeg'}
+            src={'/works/edc - 16.jpeg'}
             width={100}
             height={100}
             className="hover-images w-full rounded-md object-cover shadow-md md:w-80"
